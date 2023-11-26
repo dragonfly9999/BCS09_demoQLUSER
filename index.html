@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6 mx-auto">
+                <h3 class="display-4 text-center">Quản Lý sinh viên</h3>
+                <!-- // gọi tới sự kiện onsubmit trên form và gắn hàm xử lí vào  -->
+                <form onsubmit="getValueUser()" id="formQLSV">
+                    <div class="row">
+                        <div class="col-6 form-group">
+                            <label for="">Mã Sinh Viên : </label>
+                            <input type="text" class="form-control" id="txtMaSV">
+                            <span id="spanMaSV" class="text-danger"></span>
+                        </div>
+                        <div class="col-6 form-group">
+                            <label for="">Tên Sinh Viên : </label>
+                            <input type="text" class="form-control" id="txtTenSV">
+                            <span id="spanTenSV" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 form-group">
+                            <label for="">Email : </label>
+                            <input type="text" class="form-control" id="txtEmail">
+                            <span id="spanEmailSV" class="text-danger"></span>
+                        </div>
+                        <div class="col-6 form-group">
+                            <label for="">Mật khẩu: </label>
+                            <input type="password" class="form-control" id="txtPass">
+                            <span id="spanMatKhau" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 form-group">
+                            <label for="">Ngày Sinh : </label>
+                            <input type="date" class="form-control" id="txtNgaySinh">
+                            <span id="spanNgaySinh" class="text-danger"></span>
+                        </div>
+                        <div class="col-6 form-group">
+                            <label for="">Khóa học: </label>
+                            <select name="" id="khSV" class="form-control">
+                                <option value="">Chọn khóa học</option>
+                                <option value="KH001">KH001</option>
+                                <option value="KH002">KH002</option>
+                            </select>
+                            <span id="spanKhoaHoc" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 form-group">
+                            <label for="">Điểm toán : </label>
+                            <input type="text" class="form-control" id="txtDiemToan">
+                            <span id="spanToan" class="text-danger"></span>
+                        </div>
+                        <div class="col-4 form-group">
+                            <label for="">Điểm lý : </label>
+                            <input type="text" class="form-control" id="txtDiemLy">
+                            <span id="spanLy" class="text-danger"></span>
+                        </div>
+                        <div class="col-4 form-group">
+                            <label for="">Điểm hóa : </label>
+                            <input type="text" class="form-control" id="txtDiemHoa">
+                            <span id="spanHoa" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group text-center my-3">
+                        <button type="submit" onclick="" class="btn btn-success">Thêm Sinh Viên</button>
+
+                        <button type="button" onclick="" class="btn btn-dark">Reset</button>
+                        <button type="button" onclick="" class="btn btn-info">Cập Nhật</button>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-9 form-group">
+                        <input placeholder="Nhập tên sinh viên" type="text" class="form-control" id="txtSearch">
+                    </div>
+                    <div class="col-3 form-group">
+                        <button id="btnSearch" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 mx-auto mt-2">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Mã Sinh Viên</th>
+                            <th>Tên Sinh Viên</th>
+                            <th>Email</th>
+                            <th>Ngày Sinh</th>
+                            <th>Khóa Học</th>
+                            <th>Điểm Trung Bình</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodySinhVien">
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+       
+
+       
+    </div>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script type="modul" src="./index.js"></script>
+</body>
+
+</html>
